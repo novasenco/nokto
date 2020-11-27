@@ -11,17 +11,14 @@ fg: 252 ~ [7,7]
 bg: 16  ~ [0,0]
 0 : 236 ~ [grey]
 1 : 167 ~ [red]
-! 2 : 108  ~ [green]
-! 2 : 72  ~ [green]
 2 : 115 ~ [green]
-3 : 173 ~ [orange]
-4 : 67  ~ [blue]
+3 : 168 ~ [orange]
+4 : 110 ~ [blue]
 5 : 139 ~ [magenta]
-! 5 : 96  ~ [magenta]
 6 : 109 ~ [cyan]
 7 : 252 ~ [white]
 8 : 244 ~ [bright_grey]
-9 : 132 ~ [pink]
+9 : 211 ~ [pink]
 10: 107 ~ [bright_green]
 11: 180 ~ [yellow]
 12: 66  ~ [dark_cyan]
@@ -30,6 +27,7 @@ bg: 16  ~ [0,0]
 15: 254 ~ [bright_white]
 
 lighter_grey: 238 ~ [0,0]
+brighter_grey: 248 ~ [7,7]
 faint_grey:   233 ~ [0,0]
 
 " |group-name|
@@ -60,9 +58,9 @@ StatusLine   white  lighter_grey
 StatusLineNC yellow grey
 StatusLineTerm -> StatusLine ; StatusLineTermNC -> StatusLineNC
 
-TabLine       yellow grey
-TabLineFill   green  grey
-TabLineSel  B yellow bright_grey
+TabLine       white  lighter_grey
+TabLineFill   grey   grey
+TabLineSel  B yellow grey
 
 Pmenu        yellow grey
 PmenuSel     white  bright_grey
@@ -134,7 +132,7 @@ MatchParen BR cyan
   cMacroName            -> Identifier
   cDataStructureKeyword -> Identifier
   < vim
-  vimCommentTitle I white
+  vimCommentTitle I brighter_grey
   vimHiAttrib -> Constant
 >endif
 
