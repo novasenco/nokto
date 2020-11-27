@@ -1,23 +1,26 @@
-" Name: nokto2
-" Description: black, spacey, colorscheme
+" Name: nokto
+" Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 23 October 2020
+" Last Change: 27 November 2020
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
 ! |vimix-palette|
 
-fg: 251 ~ [7,7]
+fg: 252 ~ [7,7]
 bg: 16  ~ [0,0]
 0 : 236 ~ [grey]
 1 : 167 ~ [red]
-2 : 108  ~ [green]
+! 2 : 108  ~ [green]
+! 2 : 72  ~ [green]
+2 : 115 ~ [green]
 3 : 173 ~ [orange]
 4 : 67  ~ [blue]
 5 : 139 ~ [magenta]
+! 5 : 96  ~ [magenta]
 6 : 109 ~ [cyan]
-7 : 251 ~ [white]
-8 : 238 ~ [bright_grey]
+7 : 252 ~ [white]
+8 : 244 ~ [bright_grey]
 9 : 132 ~ [pink]
 10: 107 ~ [bright_green]
 11: 180 ~ [yellow]
@@ -26,7 +29,8 @@ bg: 16  ~ [0,0]
 14: 72  ~ [bright_cyan]
 15: 254 ~ [bright_white]
 
-faint_grey: 233 ~ [0,0]
+lighter_grey: 238 ~ [0,0]
+faint_grey:   233 ~ [0,0]
 
 " |group-name|
 
@@ -52,7 +56,7 @@ Todo  BR cyan
 
 Terminal -> Normal
 
-StatusLine   white  bright_grey
+StatusLine   white  lighter_grey
 StatusLineNC yellow grey
 StatusLineTerm -> StatusLine ; StatusLineTermNC -> StatusLineNC
 
@@ -75,7 +79,7 @@ Folded -> NonText
 
 EndOfBuffer blue
 
-Search       BR orange
+Search       BR cyan
 IncSearch    BR yellow
 QuickFixLine B  ~      grey
 
@@ -119,10 +123,10 @@ LineNrBelow  dark_cyan grey
 FoldColumn   pink      grey
 SignColumn   dark_cyan grey
 
-MatchParen BR blue
+MatchParen BR cyan
 
 < filetype modifications
->if get(g:, 'vulpo_ft_mods', 1)
+>if get(g:, 'nokto_ft_mods', 1)
   < c
   cStorageClass         -> Statement
   cEnum                 -> Statement
@@ -130,6 +134,7 @@ MatchParen BR blue
   cMacroName            -> Identifier
   cDataStructureKeyword -> Identifier
   < vim
-  vimHiAttrib -> Constant ; vimCommentTitle -> Title
+  vimCommentTitle I white
+  vimHiAttrib -> Constant
 >endif
 
