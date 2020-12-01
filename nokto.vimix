@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 27 November 2020
+" Last Change: 01 December 2020
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -10,15 +10,15 @@
 fg: 252 ~ [7,7]
 bg: 16  ~ [0,0]
 0 : 236 ~ [grey]
-1 : 167 ~ [red]
-2 : 115 ~ [green]
-3 : 168 ~ [orange]
+1 : 161 ~ [red]
+2 : 151 ~ [green]
+3 : 138 ~ [orange]
 4 : 110 ~ [blue]
 5 : 139 ~ [magenta]
 6 : 109 ~ [cyan]
 7 : 252 ~ [white]
 8 : 244 ~ [bright_grey]
-9 : 211 ~ [pink]
+9 : 175 ~ [pink]
 10: 107 ~ [bright_green]
 11: 180 ~ [yellow]
 12: 66  ~ [dark_cyan]
@@ -28,13 +28,20 @@ bg: 16  ~ [0,0]
 
 lighter_grey: 238 ~ [0,0]
 brighter_grey: 248 ~ [7,7]
-faint_grey:   233 ~ [0,0]
+faint_grey:   234 ~ [0,0]
 
 " |group-name|
 
-Constant   yellow
+! ! girly :)
+! Constant   magenta
+! String     green
+! Identifier blue
+! Statement  pink
+! Function -> PreProc -> Special -> Type -> Identifier
+
+Constant   pink
 String     green
-Identifier cyan
+Identifier blue
 Statement  magenta
 Function -> PreProc -> Special -> Type -> Identifier
 
@@ -55,12 +62,12 @@ Todo  BR cyan
 Terminal -> Normal
 
 StatusLine   white  lighter_grey
-StatusLineNC yellow grey
+StatusLineNC orange grey
 StatusLineTerm -> StatusLine ; StatusLineTermNC -> StatusLineNC
 
-TabLine       white  lighter_grey
-TabLineFill   grey   grey
-TabLineSel  B yellow grey
+TabLine     orange grey
+TabLineFill grey   grey
+TabLineSel  white  lighter_grey
 
 Pmenu        yellow grey
 PmenuSel     white  bright_grey
@@ -114,12 +121,12 @@ VisualNOS cyan grey
 
 VertSplit cyan
 
-LineNr       dark_cyan grey
-CursorLineNr pink      grey
-LineNrAbove  dark_cyan grey
-LineNrBelow  dark_cyan grey
-FoldColumn   pink      grey
-SignColumn   dark_cyan grey
+LineNr       orange faint_grey
+CursorLineNr orange faint_grey
+LineNrAbove  orange faint_grey
+LineNrBelow  orange faint_grey
+FoldColumn   orange faint_grey
+SignColumn   orange faint_grey
 
 MatchParen BR cyan
 
