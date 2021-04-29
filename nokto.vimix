@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 01 December 2020
+" Last Change: 29 April 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -26,18 +26,12 @@ bg: 16  ~ [0,0]
 14: 72  ~ [bright_cyan]
 15: 254 ~ [bright_white]
 
-lighter_grey: 238 ~ [0,0]
+lighter_grey:  238 ~ [0,0]
 brighter_grey: 248 ~ [7,7]
-faint_grey:   234 ~ [0,0]
+faint_grey:    234 ~ [0,0]
+select:        235 ~ [0,0]
 
 " |group-name|
-
-! ! girly :)
-! Constant   magenta
-! String     green
-! Identifier blue
-! Statement  pink
-! Function -> PreProc -> Special -> Type -> Identifier
 
 Constant   pink
 String     green
@@ -54,8 +48,8 @@ Underlined U
 Tag        U magenta
 HtmlBold -> Bold ; HtmlItalic -> Italic ; HtmlUnderline -> Underlined
 
-Error BR pink
-Todo  BR cyan
+Error B bg pink
+Todo  B bg cyan
 
 " |highlight-groups|
 
@@ -67,10 +61,10 @@ StatusLineTerm -> StatusLine ; StatusLineTermNC -> StatusLineNC
 
 TabLine     orange grey
 TabLineFill grey   grey
-TabLineSel  white  lighter_grey
+TabLineSel  white  select
 
-Pmenu        yellow grey
-PmenuSel     white  bright_grey
+Pmenu        brighter_grey faint_grey
+PmenuSel   R orange
 PmenuSbar  R grey
 PmenuThumb R cyan
 
@@ -84,30 +78,30 @@ Folded -> NonText
 
 EndOfBuffer blue
 
-Search       BR cyan
-IncSearch    BR yellow
-QuickFixLine B  ~      grey
+Search       B bg cyan
+IncSearch    B bg yellow
+QuickFixLine B ~  grey
 
-Conceal    blue
-Cursor   R white
-lCursor  R white
-CursorIM R white
+Conceal  blue
+Cursor   bg white
+lCursor  bg white
+CursorIM bg white
 
 Directory blue
 
-ErrorMsg   BR pink
-WarningMsg BR yellow
+ErrorMsg   B bg pink
+WarningMsg B bg yellow
 
 ModeMsg B yellow
 MoreMsg  -> Question -> ModeMsg
 
-SpellBad BR pink
+SpellBad B bg pink
 SpellCap -> SpellLocal -> SpellRare -> SpellBad
 
-DiffAdd    BR cyan
-DiffDelete    pink  pink
-DiffChange R  blue
-DiffText   BR yellow
+DiffAdd    B bg   cyan
+DiffDelete   pink pink
+DiffChange   bg   blue
+DiffText   B bg   yellow
 
 DiffAdded   B cyan faint_grey
 DiffRemoved B pink faint_grey
@@ -128,7 +122,7 @@ LineNrBelow  orange faint_grey
 FoldColumn   orange faint_grey
 SignColumn   orange faint_grey
 
-MatchParen BR cyan
+MatchParen B bg cyan
 
 < filetype modifications
 >if get(g:, 'nokto_ft_mods', 1)

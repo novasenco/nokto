@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 01 December 2020
+" Last Change: 29 April 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -59,15 +59,15 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight Italic cterm=italic ctermfg=NONE ctermbg=NONE gui=italic guifg=NONE guibg=NONE
   highlight Underlined cterm=underline ctermfg=NONE ctermbg=NONE gui=underline guifg=NONE guibg=NONE
   highlight Tag cterm=underline ctermfg=5 ctermbg=NONE gui=underline guifg=#af87af guibg=NONE
-  highlight Error cterm=bold,reverse ctermfg=9 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
-  highlight Todo cterm=bold,reverse ctermfg=6 ctermbg=NONE gui=bold,reverse guifg=#87afaf guibg=NONE
+  highlight Error cterm=bold ctermfg=0 ctermbg=9 gui=bold guifg=#000000 guibg=#d787af
+  highlight Todo cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
   highlight StatusLine cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=#d0d0d0 guibg=#444444
   highlight StatusLineNC cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#303030
   highlight TabLine cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#303030
   highlight TabLineFill cterm=NONE ctermfg=0 ctermbg=0 gui=NONE guifg=#303030 guibg=#303030
-  highlight TabLineSel cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=#d0d0d0 guibg=#444444
-  highlight Pmenu cterm=NONE ctermfg=11 ctermbg=0 gui=NONE guifg=#d7af87 guibg=#303030
-  highlight PmenuSel cterm=NONE ctermfg=7 ctermbg=8 gui=NONE guifg=#d0d0d0 guibg=#808080
+  highlight TabLineSel cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=#d0d0d0 guibg=#262626
+  highlight Pmenu cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=#a8a8a8 guibg=#1c1c1c
+  highlight PmenuSel cterm=reverse ctermfg=3 ctermbg=NONE gui=reverse guifg=#af8787 guibg=NONE
   highlight PmenuSbar cterm=reverse ctermfg=0 ctermbg=NONE gui=reverse guifg=#303030 guibg=NONE
   highlight PmenuThumb cterm=reverse ctermfg=6 ctermbg=NONE gui=reverse guifg=#87afaf guibg=NONE
   highlight WildMenu cterm=bold,reverse ctermfg=11 ctermbg=NONE gui=bold,reverse guifg=#d7af87 guibg=NONE
@@ -75,22 +75,22 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight SpecialKey cterm=NONE ctermfg=8 ctermbg=NONE gui=NONE guifg=#808080 guibg=NONE
   highlight NonText cterm=italic ctermfg=4 ctermbg=0 gui=italic guifg=#87afd7 guibg=#1c1c1c
   highlight EndOfBuffer cterm=NONE ctermfg=4 ctermbg=NONE gui=NONE guifg=#87afd7 guibg=NONE
-  highlight Search cterm=bold,reverse ctermfg=6 ctermbg=NONE gui=bold,reverse guifg=#87afaf guibg=NONE
-  highlight IncSearch cterm=bold,reverse ctermfg=11 ctermbg=NONE gui=bold,reverse guifg=#d7af87 guibg=NONE
+  highlight Search cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
+  highlight IncSearch cterm=bold ctermfg=0 ctermbg=11 gui=bold guifg=#000000 guibg=#d7af87
   highlight QuickFixLine cterm=bold ctermfg=NONE ctermbg=0 gui=bold guifg=NONE guibg=#303030
   highlight Conceal cterm=NONE ctermfg=4 ctermbg=NONE gui=NONE guifg=#87afd7 guibg=NONE
-  highlight Cursor cterm=reverse ctermfg=7 ctermbg=NONE gui=reverse guifg=#d0d0d0 guibg=NONE
-  highlight lCursor cterm=reverse ctermfg=7 ctermbg=NONE gui=reverse guifg=#d0d0d0 guibg=NONE
-  highlight CursorIM cterm=reverse ctermfg=7 ctermbg=NONE gui=reverse guifg=#d0d0d0 guibg=NONE
+  highlight Cursor cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=#000000 guibg=#d0d0d0
+  highlight lCursor cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=#000000 guibg=#d0d0d0
+  highlight CursorIM cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=#000000 guibg=#d0d0d0
   highlight Directory cterm=NONE ctermfg=4 ctermbg=NONE gui=NONE guifg=#87afd7 guibg=NONE
-  highlight ErrorMsg cterm=bold,reverse ctermfg=9 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
-  highlight WarningMsg cterm=bold,reverse ctermfg=11 ctermbg=NONE gui=bold,reverse guifg=#d7af87 guibg=NONE
+  highlight ErrorMsg cterm=bold ctermfg=0 ctermbg=9 gui=bold guifg=#000000 guibg=#d787af
+  highlight WarningMsg cterm=bold ctermfg=0 ctermbg=11 gui=bold guifg=#000000 guibg=#d7af87
   highlight ModeMsg cterm=bold ctermfg=11 ctermbg=NONE gui=bold guifg=#d7af87 guibg=NONE
-  highlight SpellBad cterm=bold,reverse ctermfg=9 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
-  highlight DiffAdd cterm=bold,reverse ctermfg=6 ctermbg=NONE gui=bold,reverse guifg=#87afaf guibg=NONE
+  highlight SpellBad cterm=bold ctermfg=0 ctermbg=9 gui=bold guifg=#000000 guibg=#d787af
+  highlight DiffAdd cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
   highlight DiffDelete cterm=NONE ctermfg=9 ctermbg=9 gui=NONE guifg=#d787af guibg=#d787af
-  highlight DiffChange cterm=reverse ctermfg=4 ctermbg=NONE gui=reverse guifg=#87afd7 guibg=NONE
-  highlight DiffText cterm=bold,reverse ctermfg=11 ctermbg=NONE gui=bold,reverse guifg=#d7af87 guibg=NONE
+  highlight DiffChange cterm=NONE ctermfg=0 ctermbg=4 gui=NONE guifg=#000000 guibg=#87afd7
+  highlight DiffText cterm=bold ctermfg=0 ctermbg=11 gui=bold guifg=#000000 guibg=#d7af87
   highlight DiffAdded cterm=bold ctermfg=6 ctermbg=0 gui=bold guifg=#87afaf guibg=#1c1c1c
   highlight DiffRemoved cterm=bold ctermfg=9 ctermbg=0 gui=bold guifg=#d787af guibg=#1c1c1c
   highlight ColorColumn cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#1c1c1c
@@ -105,7 +105,7 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight LineNrBelow cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#1c1c1c
   highlight FoldColumn cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#1c1c1c
   highlight SignColumn cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#1c1c1c
-  highlight MatchParen cterm=bold,reverse ctermfg=6 ctermbg=NONE gui=bold,reverse guifg=#87afaf guibg=NONE
+  highlight MatchParen cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
   highlight vimCommentTitle cterm=italic ctermfg=7 ctermbg=NONE gui=italic guifg=#a8a8a8 guibg=NONE
   finish
 endif
@@ -127,8 +127,8 @@ highlight Italic cterm=italic ctermfg=NONE ctermbg=NONE gui=italic guifg=NONE gu
 highlight Underlined cterm=underline ctermfg=NONE ctermbg=NONE gui=underline guifg=NONE guibg=NONE
 highlight Tag cterm=underline ctermfg=139 ctermbg=NONE gui=underline guifg=#af87af guibg=NONE
 
-highlight Error cterm=bold,reverse ctermfg=175 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
-highlight Todo cterm=bold,reverse ctermfg=109 ctermbg=NONE gui=bold,reverse guifg=#87afaf guibg=NONE
+highlight Error cterm=bold ctermfg=16 ctermbg=175 gui=bold guifg=#000000 guibg=#d787af
+highlight Todo cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 guibg=#87afaf
 
 " |highlight-groups|
 
@@ -137,10 +137,10 @@ highlight StatusLineNC cterm=NONE ctermfg=138 ctermbg=236 gui=NONE guifg=#af8787
 
 highlight TabLine cterm=NONE ctermfg=138 ctermbg=236 gui=NONE guifg=#af8787 guibg=#303030
 highlight TabLineFill cterm=NONE ctermfg=236 ctermbg=236 gui=NONE guifg=#303030 guibg=#303030
-highlight TabLineSel cterm=NONE ctermfg=252 ctermbg=238 gui=NONE guifg=#d0d0d0 guibg=#444444
+highlight TabLineSel cterm=NONE ctermfg=252 ctermbg=235 gui=NONE guifg=#d0d0d0 guibg=#262626
 
-highlight Pmenu cterm=NONE ctermfg=180 ctermbg=236 gui=NONE guifg=#d7af87 guibg=#303030
-highlight PmenuSel cterm=NONE ctermfg=252 ctermbg=244 gui=NONE guifg=#d0d0d0 guibg=#808080
+highlight Pmenu cterm=NONE ctermfg=248 ctermbg=234 gui=NONE guifg=#a8a8a8 guibg=#1c1c1c
+highlight PmenuSel cterm=reverse ctermfg=138 ctermbg=NONE gui=reverse guifg=#af8787 guibg=NONE
 highlight PmenuSbar cterm=reverse ctermfg=236 ctermbg=NONE gui=reverse guifg=#303030 guibg=NONE
 highlight PmenuThumb cterm=reverse ctermfg=109 ctermbg=NONE gui=reverse guifg=#87afaf guibg=NONE
 
@@ -153,28 +153,28 @@ highlight NonText cterm=italic ctermfg=110 ctermbg=234 gui=italic guifg=#87afd7 
 
 highlight EndOfBuffer cterm=NONE ctermfg=110 ctermbg=NONE gui=NONE guifg=#87afd7 guibg=NONE
 
-highlight Search cterm=bold,reverse ctermfg=109 ctermbg=NONE gui=bold,reverse guifg=#87afaf guibg=NONE
-highlight IncSearch cterm=bold,reverse ctermfg=180 ctermbg=NONE gui=bold,reverse guifg=#d7af87 guibg=NONE
+highlight Search cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 guibg=#87afaf
+highlight IncSearch cterm=bold ctermfg=16 ctermbg=180 gui=bold guifg=#000000 guibg=#d7af87
 highlight QuickFixLine cterm=bold ctermfg=NONE ctermbg=236 gui=bold guifg=NONE guibg=#303030
 
 highlight Conceal cterm=NONE ctermfg=110 ctermbg=NONE gui=NONE guifg=#87afd7 guibg=NONE
-highlight Cursor cterm=reverse ctermfg=252 ctermbg=NONE gui=reverse guifg=#d0d0d0 guibg=NONE
-highlight lCursor cterm=reverse ctermfg=252 ctermbg=NONE gui=reverse guifg=#d0d0d0 guibg=NONE
-highlight CursorIM cterm=reverse ctermfg=252 ctermbg=NONE gui=reverse guifg=#d0d0d0 guibg=NONE
+highlight Cursor cterm=NONE ctermfg=16 ctermbg=252 gui=NONE guifg=#000000 guibg=#d0d0d0
+highlight lCursor cterm=NONE ctermfg=16 ctermbg=252 gui=NONE guifg=#000000 guibg=#d0d0d0
+highlight CursorIM cterm=NONE ctermfg=16 ctermbg=252 gui=NONE guifg=#000000 guibg=#d0d0d0
 
 highlight Directory cterm=NONE ctermfg=110 ctermbg=NONE gui=NONE guifg=#87afd7 guibg=NONE
 
-highlight ErrorMsg cterm=bold,reverse ctermfg=175 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
-highlight WarningMsg cterm=bold,reverse ctermfg=180 ctermbg=NONE gui=bold,reverse guifg=#d7af87 guibg=NONE
+highlight ErrorMsg cterm=bold ctermfg=16 ctermbg=175 gui=bold guifg=#000000 guibg=#d787af
+highlight WarningMsg cterm=bold ctermfg=16 ctermbg=180 gui=bold guifg=#000000 guibg=#d7af87
 
 highlight ModeMsg cterm=bold ctermfg=180 ctermbg=NONE gui=bold guifg=#d7af87 guibg=NONE
 
-highlight SpellBad cterm=bold,reverse ctermfg=175 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
+highlight SpellBad cterm=bold ctermfg=16 ctermbg=175 gui=bold guifg=#000000 guibg=#d787af
 
-highlight DiffAdd cterm=bold,reverse ctermfg=109 ctermbg=NONE gui=bold,reverse guifg=#87afaf guibg=NONE
+highlight DiffAdd cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 guibg=#87afaf
 highlight DiffDelete cterm=NONE ctermfg=175 ctermbg=175 gui=NONE guifg=#d787af guibg=#d787af
-highlight DiffChange cterm=reverse ctermfg=110 ctermbg=NONE gui=reverse guifg=#87afd7 guibg=NONE
-highlight DiffText cterm=bold,reverse ctermfg=180 ctermbg=NONE gui=bold,reverse guifg=#d7af87 guibg=NONE
+highlight DiffChange cterm=NONE ctermfg=16 ctermbg=110 gui=NONE guifg=#000000 guibg=#87afd7
+highlight DiffText cterm=bold ctermfg=16 ctermbg=180 gui=bold guifg=#000000 guibg=#d7af87
 
 highlight DiffAdded cterm=bold ctermfg=109 ctermbg=234 gui=bold guifg=#87afaf guibg=#1c1c1c
 highlight DiffRemoved cterm=bold ctermfg=175 ctermbg=234 gui=bold guifg=#d787af guibg=#1c1c1c
@@ -195,7 +195,7 @@ highlight LineNrBelow cterm=NONE ctermfg=138 ctermbg=234 gui=NONE guifg=#af8787 
 highlight FoldColumn cterm=NONE ctermfg=138 ctermbg=234 gui=NONE guifg=#af8787 guibg=#1c1c1c
 highlight SignColumn cterm=NONE ctermfg=138 ctermbg=234 gui=NONE guifg=#af8787 guibg=#1c1c1c
 
-highlight MatchParen cterm=bold,reverse ctermfg=109 ctermbg=NONE gui=bold,reverse guifg=#87afaf guibg=NONE
+highlight MatchParen cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 guibg=#87afaf
 
 highlight vimCommentTitle cterm=italic ctermfg=248 ctermbg=NONE gui=italic guifg=#a8a8a8 guibg=NONE
 
