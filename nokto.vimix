@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 29 April 2021
+" Last Change: 09 May 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -30,6 +30,7 @@ lighter_grey:  238 ~ [0,0]
 brighter_grey: 248 ~ [7,7]
 faint_grey:    234 ~ [0,0]
 select:        235 ~ [0,0]
+invis:         233 ~ [0,0]
 
 " |group-name|
 
@@ -52,6 +53,8 @@ Error B bg pink
 Todo  B bg cyan
 
 " |highlight-groups|
+
+! NormalNC ~ ~
 
 Terminal -> Normal
 
@@ -110,17 +113,17 @@ ColorColumn  ~ faint_grey
 CursorColumn ~ faint_grey
 CursorLine   ~ faint_grey
 
-Visual    cyan grey
-VisualNOS cyan grey
+Visual    ~ grey
+VisualNOS ~ grey
 
 VertSplit cyan
 
-LineNr       orange faint_grey
-CursorLineNr orange faint_grey
-LineNrAbove  orange faint_grey
-LineNrBelow  orange faint_grey
-FoldColumn   orange faint_grey
-SignColumn   orange faint_grey
+LineNr       orange
+CursorLineNr orange
+LineNrAbove  orange
+LineNrBelow  orange
+FoldColumn   orange
+SignColumn   orange
 
 MatchParen B bg cyan
 

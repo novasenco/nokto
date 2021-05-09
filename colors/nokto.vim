@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 29 April 2021
+" Last Change: 09 May 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -96,15 +96,15 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight ColorColumn cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#1c1c1c
   highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#1c1c1c
   highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#1c1c1c
-  highlight Visual cterm=NONE ctermfg=6 ctermbg=0 gui=NONE guifg=#87afaf guibg=#303030
-  highlight VisualNOS cterm=NONE ctermfg=6 ctermbg=0 gui=NONE guifg=#87afaf guibg=#303030
+  highlight Visual cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#303030
+  highlight VisualNOS cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#303030
   highlight VertSplit cterm=NONE ctermfg=6 ctermbg=NONE gui=NONE guifg=#87afaf guibg=NONE
-  highlight LineNr cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#1c1c1c
-  highlight CursorLineNr cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#1c1c1c
-  highlight LineNrAbove cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#1c1c1c
-  highlight LineNrBelow cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#1c1c1c
-  highlight FoldColumn cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#1c1c1c
-  highlight SignColumn cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#1c1c1c
+  highlight LineNr cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+  highlight CursorLineNr cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+  highlight LineNrAbove cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+  highlight LineNrBelow cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+  highlight FoldColumn cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+  highlight SignColumn cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
   highlight MatchParen cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
   highlight vimCommentTitle cterm=italic ctermfg=7 ctermbg=NONE gui=italic guifg=#a8a8a8 guibg=NONE
   finish
@@ -183,17 +183,17 @@ highlight ColorColumn cterm=NONE ctermfg=NONE ctermbg=234 gui=NONE guifg=NONE gu
 highlight CursorColumn cterm=NONE ctermfg=NONE ctermbg=234 gui=NONE guifg=NONE guibg=#1c1c1c
 highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 gui=NONE guifg=NONE guibg=#1c1c1c
 
-highlight Visual cterm=NONE ctermfg=109 ctermbg=236 gui=NONE guifg=#87afaf guibg=#303030
-highlight VisualNOS cterm=NONE ctermfg=109 ctermbg=236 gui=NONE guifg=#87afaf guibg=#303030
+highlight Visual cterm=NONE ctermfg=NONE ctermbg=236 gui=NONE guifg=NONE guibg=#303030
+highlight VisualNOS cterm=NONE ctermfg=NONE ctermbg=236 gui=NONE guifg=NONE guibg=#303030
 
 highlight VertSplit cterm=NONE ctermfg=109 ctermbg=NONE gui=NONE guifg=#87afaf guibg=NONE
 
-highlight LineNr cterm=NONE ctermfg=138 ctermbg=234 gui=NONE guifg=#af8787 guibg=#1c1c1c
-highlight CursorLineNr cterm=NONE ctermfg=138 ctermbg=234 gui=NONE guifg=#af8787 guibg=#1c1c1c
-highlight LineNrAbove cterm=NONE ctermfg=138 ctermbg=234 gui=NONE guifg=#af8787 guibg=#1c1c1c
-highlight LineNrBelow cterm=NONE ctermfg=138 ctermbg=234 gui=NONE guifg=#af8787 guibg=#1c1c1c
-highlight FoldColumn cterm=NONE ctermfg=138 ctermbg=234 gui=NONE guifg=#af8787 guibg=#1c1c1c
-highlight SignColumn cterm=NONE ctermfg=138 ctermbg=234 gui=NONE guifg=#af8787 guibg=#1c1c1c
+highlight LineNr cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+highlight CursorLineNr cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+highlight LineNrAbove cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+highlight LineNrBelow cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+highlight FoldColumn cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+highlight SignColumn cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
 
 highlight MatchParen cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 guibg=#87afaf
 
