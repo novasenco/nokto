@@ -54,9 +54,8 @@ Todo  B bg cyan
 
 " |highlight-groups|
 
-! NormalNC ~ ~
-
 Terminal -> Normal
+NormalFloat -> Normal
 
 StatusLine   white  lighter_grey
 StatusLineNC orange grey

@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 09 May 2021
+" Last Change: 19 May 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -26,6 +26,7 @@ highlight! link HtmlBold Bold
 highlight! link HtmlItalic Italic
 highlight! link HtmlUnderline Underlined
 highlight! link Terminal Normal
+highlight! link NormalFloat Normal
 highlight! link StatusLineTerm StatusLine
 highlight! link StatusLineTermNC StatusLineNC
 highlight! link Folded NonText
