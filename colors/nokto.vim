@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 19 May 2021
+" Last Change: 20 May 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -99,7 +99,7 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#1c1c1c
   highlight Visual cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#303030
   highlight VisualNOS cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#303030
-  highlight VertSplit cterm=NONE ctermfg=6 ctermbg=NONE gui=NONE guifg=#87afaf guibg=NONE
+  highlight VertSplit cterm=NONE ctermfg=8 ctermbg=NONE gui=NONE guifg=#808080 guibg=NONE
   highlight LineNr cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
   highlight CursorLineNr cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
   highlight LineNrAbove cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
@@ -187,7 +187,7 @@ highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=234 gui=NONE guifg=NONE gui
 highlight Visual cterm=NONE ctermfg=NONE ctermbg=236 gui=NONE guifg=NONE guibg=#303030
 highlight VisualNOS cterm=NONE ctermfg=NONE ctermbg=236 gui=NONE guifg=NONE guibg=#303030
 
-highlight VertSplit cterm=NONE ctermfg=109 ctermbg=NONE gui=NONE guifg=#87afaf guibg=NONE
+highlight VertSplit cterm=NONE ctermfg=244 ctermbg=NONE gui=NONE guifg=#808080 guibg=NONE
 
 highlight LineNr cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
 highlight CursorLineNr cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE

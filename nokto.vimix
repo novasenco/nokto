@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 09 May 2021
+" Last Change: 20 May 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -115,7 +115,7 @@ CursorLine   ~ faint_grey
 Visual    ~ grey
 VisualNOS ~ grey
 
-VertSplit cyan
+VertSplit bright_grey
 
 LineNr       orange
 CursorLineNr orange
