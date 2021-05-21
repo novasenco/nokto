@@ -137,5 +137,7 @@ MatchParen B bg cyan
   < vim
   vimCommentTitle I brighter_grey
   vimHiAttrib -> Constant
+  < markdown
+  markdownCode orange
 >endif
 
