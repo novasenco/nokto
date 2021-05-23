@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 20 May 2021
+" Last Change: 22 May 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -46,6 +46,7 @@ if get(g:, 'nokto_ft_mods', 1)
   " vim
   highlight! link vimHiAttrib Constant
   " markdown
+  highlight! link markdownCodeBlock markdownCode
 endif
 
 " automatically downgrade if &t_Co is smaller than 256
@@ -110,6 +111,9 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight MatchParen cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
   highlight vimCommentTitle cterm=italic ctermfg=7 ctermbg=NONE gui=italic guifg=#a8a8a8 guibg=NONE
   highlight markdownCode cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+  if get(g:, 'nokto_no_bg')
+    highlight Normal ctermbg=NONE guibg=NONE
+  endif
   finish
 endif
 
@@ -202,4 +206,8 @@ highlight MatchParen cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 gu
 
 highlight vimCommentTitle cterm=italic ctermfg=248 ctermbg=NONE gui=italic guifg=#a8a8a8 guibg=NONE
 highlight markdownCode cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+
+if get(g:, 'nokto_no_bg')
+  highlight Normal ctermbg=NONE guibg=NONE
+endif
 

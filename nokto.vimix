@@ -139,5 +139,6 @@ MatchParen B bg cyan
   vimHiAttrib -> Constant
   < markdown
   markdownCode orange
+  markdownCodeBlock -> markdownCode
 >endif
 
