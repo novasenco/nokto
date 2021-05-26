@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 22 May 2021
+" Last Change: 25 May 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -26,7 +26,6 @@ highlight! link HtmlBold Bold
 highlight! link HtmlItalic Italic
 highlight! link HtmlUnderline Underlined
 highlight! link Terminal Normal
-highlight! link NormalFloat Normal
 highlight! link StatusLineTerm StatusLine
 highlight! link StatusLineTermNC StatusLineNC
 highlight! link Folded NonText
@@ -64,6 +63,7 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight Tag cterm=underline ctermfg=5 ctermbg=NONE gui=underline guifg=#af87af guibg=NONE
   highlight Error cterm=bold ctermfg=0 ctermbg=9 gui=bold guifg=#000000 guibg=#d787af
   highlight Todo cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
+  highlight NormalFloat cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#1c1c1c
   highlight StatusLine cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=#d0d0d0 guibg=#444444
   highlight StatusLineNC cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#303030
   highlight TabLine cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#303030
@@ -111,9 +111,6 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight MatchParen cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
   highlight vimCommentTitle cterm=italic ctermfg=7 ctermbg=NONE gui=italic guifg=#a8a8a8 guibg=NONE
   highlight markdownCode cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
-  if get(g:, 'nokto_no_bg')
-    highlight Normal ctermbg=NONE guibg=NONE
-  endif
   finish
 endif
 
@@ -138,6 +135,8 @@ highlight Error cterm=bold ctermfg=16 ctermbg=175 gui=bold guifg=#000000 guibg=#
 highlight Todo cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 guibg=#87afaf
 
 " |highlight-groups|
+
+highlight NormalFloat cterm=NONE ctermfg=NONE ctermbg=234 gui=NONE guifg=NONE guibg=#1c1c1c
 
 highlight StatusLine cterm=NONE ctermfg=252 ctermbg=238 gui=NONE guifg=#d0d0d0 guibg=#444444
 highlight StatusLineNC cterm=NONE ctermfg=138 ctermbg=236 gui=NONE guifg=#af8787 guibg=#303030
@@ -206,8 +205,4 @@ highlight MatchParen cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 gu
 
 highlight vimCommentTitle cterm=italic ctermfg=248 ctermbg=NONE gui=italic guifg=#a8a8a8 guibg=NONE
 highlight markdownCode cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
-
-if get(g:, 'nokto_no_bg')
-  highlight Normal ctermbg=NONE guibg=NONE
-endif
 
