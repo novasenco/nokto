@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 25 May 2021
+" Last Change: 27 May 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -125,6 +125,89 @@ FoldColumn   orange
 SignColumn   orange
 
 MatchParen B bg cyan
+
+"--- TREESITTER ----------------------------------------------------------------
+
+TSConstant           ->  Constant
+" constant that are built in the language: `nil` in Lua.
+TSConstBuiltin       I pink
+" constants that are defined by macros: `NULL` in C.
+TSConstMacro         B pink
+TSNumber             -> Number
+TSFloat              -> Float
+TSBoolean            -> Boolean
+TSCharacter          -> Character
+TSString             -> String
+TSStringRegex        -> String
+" escape characters within a string
+TSStringEscape       -> String
+" For identifiers referring to symbols or atoms.
+TSSymbol             I magenta
+
+" TODO: More variety in these groups
+
+TSField              fg
+TSProperty           -> TSField
+TSParameter          fg
+TSParameterReference -> TSParameter
+! Any variable name that does not have another highlight
+TSVariable           fg
+! Variable names that are defined by the languages like `this` or `self`.
+TSVariableBuiltin    I blue
+
+TSFunction           -> Function
+TSFuncBuiltin        -> TSFunction
+! macro defined fuctions: each `macro_rules` in Rust
+TSFuncMacro          -> TSFunction
+TSMethod             -> TSFunction
+! For constructor: `{}` in Lua and Java constructors.
+TSConstructor        -> TSFunction
+TSKeywordFunction    green
+
+TSKeyword            -> Keyword
+TSConditional        -> Conditional
+TSRepeat             -> Repeat
+TSLabel              -> Label
+TSOperator           -> Operator
+TSException          -> Exception
+
+! identifiers referring to modules and namespaces.
+TSNamespace          -> PreProc
+! C++/Dart attributes annotations that can be attached to the code to denote some kind of meta information
+TSAnnotation         -> TSNamespace
+! TSAttribute ! Unstable
+! includes: `#include` in C `use` or `extern crate` in Rust or `require` in Lua.
+TSInclude            -> TSNamespace
+
+TSType               -> Type
+TSTypeBuiltin        I blue
+
+! delimiters ie: `.`
+TSPunctDelimiter     -> Delimiter
+! brackets and parens.
+TSPunctBracket       orange
+! special punctutation that does not fall in the catagories before.
+TSPunctSpecial       -> Delimiter
+
+TSComment            -> Comment
+! Tags like html tag names.
+TSTag                -> Tag
+! Tag delimiter like < > /
+TSTagDelimiter       -> Special
+TSText               fg
+TSEmphasis           I fg
+TSUnderline          U fg
+TSStrike             U bright_grey
+TSStrong             B fg
+! Text that is part of a title
+TSTitle              orange
+! Literal text
+TSLiteral            -> TSString
+! Any URI like a link or email
+TSURI                -> TSSymbol
+
+! syntax/parser errors.
+TSError              red
 
 < filetype modifications
 >if get(g:, 'nokto_ft_mods', 1)

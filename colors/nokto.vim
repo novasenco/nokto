@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 25 May 2021
+" Last Change: 27 May 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -34,6 +34,38 @@ highlight! link Question ModeMsg
 highlight! link SpellCap SpellBad
 highlight! link SpellLocal SpellBad
 highlight! link SpellRare SpellBad
+highlight! link TSConstant Constant
+highlight! link TSNumber Number
+highlight! link TSFloat Float
+highlight! link TSBoolean Boolean
+highlight! link TSCharacter Character
+highlight! link TSString String
+highlight! link TSStringRegex String
+highlight! link TSStringEscape String
+highlight! link TSProperty TSField
+highlight! link TSParameterReference TSParameter
+highlight! link TSFunction Function
+highlight! link TSFuncBuiltin TSFunction
+highlight! link TSFuncMacro TSFunction
+highlight! link TSMethod TSFunction
+highlight! link TSConstructor TSFunction
+highlight! link TSKeyword Keyword
+highlight! link TSConditional Conditional
+highlight! link TSRepeat Repeat
+highlight! link TSLabel Label
+highlight! link TSOperator Operator
+highlight! link TSException Exception
+highlight! link TSNamespace PreProc
+highlight! link TSAnnotation TSNamespace
+highlight! link TSInclude TSNamespace
+highlight! link TSType Type
+highlight! link TSPunctDelimiter Delimiter
+highlight! link TSPunctSpecial Delimiter
+highlight! link TSComment Comment
+highlight! link TSTag Tag
+highlight! link TSTagDelimiter Special
+highlight! link TSLiteral TSString
+highlight! link TSURI TSSymbol
 " filetype modifications
 if get(g:, 'nokto_ft_mods', 1)
   " c
@@ -109,6 +141,23 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight FoldColumn cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
   highlight SignColumn cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
   highlight MatchParen cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
+  highlight TSConstBuiltin cterm=italic ctermfg=9 ctermbg=NONE gui=italic guifg=#d787af guibg=NONE
+  highlight TSConstMacro cterm=bold ctermfg=9 ctermbg=NONE gui=bold guifg=#d787af guibg=NONE
+  highlight TSSymbol cterm=italic ctermfg=5 ctermbg=NONE gui=italic guifg=#af87af guibg=NONE
+  highlight TSField cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
+  highlight TSParameter cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
+  highlight TSVariable cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
+  highlight TSVariableBuiltin cterm=italic ctermfg=4 ctermbg=NONE gui=italic guifg=#87afd7 guibg=NONE
+  highlight TSKeywordFunction cterm=NONE ctermfg=2 ctermbg=NONE gui=NONE guifg=#afd7af guibg=NONE
+  highlight TSTypeBuiltin cterm=italic ctermfg=4 ctermbg=NONE gui=italic guifg=#87afd7 guibg=NONE
+  highlight TSPunctBracket cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+  highlight TSText cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
+  highlight TSEmphasis cterm=italic ctermfg=7 ctermbg=NONE gui=italic guifg=#d0d0d0 guibg=NONE
+  highlight TSUnderline cterm=underline ctermfg=7 ctermbg=NONE gui=underline guifg=#d0d0d0 guibg=NONE
+  highlight TSStrike cterm=underline ctermfg=8 ctermbg=NONE gui=underline guifg=#808080 guibg=NONE
+  highlight TSStrong cterm=bold ctermfg=7 ctermbg=NONE gui=bold guifg=#d0d0d0 guibg=NONE
+  highlight TSTitle cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+  highlight TSError cterm=NONE ctermfg=1 ctermbg=NONE gui=NONE guifg=#d7005f guibg=NONE
   highlight vimCommentTitle cterm=italic ctermfg=7 ctermbg=NONE gui=italic guifg=#a8a8a8 guibg=NONE
   highlight markdownCode cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
   finish
@@ -202,6 +251,38 @@ highlight FoldColumn cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 
 highlight SignColumn cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
 
 highlight MatchParen cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 guibg=#87afaf
+
+"--- TREESITTER ----------------------------------------------------------------
+
+" constant that are built in the language: `nil` in Lua.
+highlight TSConstBuiltin cterm=italic ctermfg=175 ctermbg=NONE gui=italic guifg=#d787af guibg=NONE
+" constants that are defined by macros: `NULL` in C.
+highlight TSConstMacro cterm=bold ctermfg=175 ctermbg=NONE gui=bold guifg=#d787af guibg=NONE
+" escape characters within a string
+" For identifiers referring to symbols or atoms.
+highlight TSSymbol cterm=italic ctermfg=139 ctermbg=NONE gui=italic guifg=#af87af guibg=NONE
+
+" TODO: More variety in these groups
+
+highlight TSField cterm=NONE ctermfg=252 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
+highlight TSParameter cterm=NONE ctermfg=252 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
+highlight TSVariable cterm=NONE ctermfg=252 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
+highlight TSVariableBuiltin cterm=italic ctermfg=110 ctermbg=NONE gui=italic guifg=#87afd7 guibg=NONE
+
+highlight TSKeywordFunction cterm=NONE ctermfg=151 ctermbg=NONE gui=NONE guifg=#afd7af guibg=NONE
+
+highlight TSTypeBuiltin cterm=italic ctermfg=110 ctermbg=NONE gui=italic guifg=#87afd7 guibg=NONE
+
+highlight TSPunctBracket cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+
+highlight TSText cterm=NONE ctermfg=252 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
+highlight TSEmphasis cterm=italic ctermfg=252 ctermbg=NONE gui=italic guifg=#d0d0d0 guibg=NONE
+highlight TSUnderline cterm=underline ctermfg=252 ctermbg=NONE gui=underline guifg=#d0d0d0 guibg=NONE
+highlight TSStrike cterm=underline ctermfg=244 ctermbg=NONE gui=underline guifg=#808080 guibg=NONE
+highlight TSStrong cterm=bold ctermfg=252 ctermbg=NONE gui=bold guifg=#d0d0d0 guibg=NONE
+highlight TSTitle cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
+
+highlight TSError cterm=NONE ctermfg=161 ctermbg=NONE gui=NONE guifg=#d7005f guibg=NONE
 
 highlight vimCommentTitle cterm=italic ctermfg=248 ctermbg=NONE gui=italic guifg=#a8a8a8 guibg=NONE
 highlight markdownCode cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
