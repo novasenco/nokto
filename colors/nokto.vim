@@ -35,6 +35,7 @@ highlight! link SpellCap SpellBad
 highlight! link SpellLocal SpellBad
 highlight! link SpellRare SpellBad
 highlight! link TSConstant Constant
+highlight! link TSConstBuiltin Constant
 highlight! link TSNumber Number
 highlight! link TSFloat Float
 highlight! link TSBoolean Boolean
@@ -59,6 +60,7 @@ highlight! link TSNamespace PreProc
 highlight! link TSAnnotation TSNamespace
 highlight! link TSInclude TSNamespace
 highlight! link TSType Type
+highlight! link TSTypeBuiltin Type
 highlight! link TSPunctDelimiter Delimiter
 highlight! link TSPunctSpecial Delimiter
 highlight! link TSComment Comment
@@ -141,15 +143,13 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight FoldColumn cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
   highlight SignColumn cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
   highlight MatchParen cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
-  highlight TSConstBuiltin cterm=italic ctermfg=9 ctermbg=NONE gui=italic guifg=#d787af guibg=NONE
   highlight TSConstMacro cterm=bold ctermfg=9 ctermbg=NONE gui=bold guifg=#d787af guibg=NONE
-  highlight TSSymbol cterm=italic ctermfg=5 ctermbg=NONE gui=italic guifg=#af87af guibg=NONE
+  highlight TSSymbol cterm=bold ctermfg=5 ctermbg=NONE gui=bold guifg=#af87af guibg=NONE
   highlight TSField cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
   highlight TSParameter cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
   highlight TSVariable cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
-  highlight TSVariableBuiltin cterm=italic ctermfg=4 ctermbg=NONE gui=italic guifg=#87afd7 guibg=NONE
+  highlight TSVariableBuiltin cterm=NONE ctermfg=4 ctermbg=NONE gui=NONE guifg=#87afd7 guibg=NONE
   highlight TSKeywordFunction cterm=NONE ctermfg=2 ctermbg=NONE gui=NONE guifg=#afd7af guibg=NONE
-  highlight TSTypeBuiltin cterm=italic ctermfg=4 ctermbg=NONE gui=italic guifg=#87afd7 guibg=NONE
   highlight TSPunctBracket cterm=NONE ctermfg=3 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
   highlight TSText cterm=NONE ctermfg=7 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
   highlight TSEmphasis cterm=italic ctermfg=7 ctermbg=NONE gui=italic guifg=#d0d0d0 guibg=NONE
@@ -252,26 +252,15 @@ highlight SignColumn cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 
 
 highlight MatchParen cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 guibg=#87afaf
 
-"--- TREESITTER ----------------------------------------------------------------
-
-" constant that are built in the language: `nil` in Lua.
-highlight TSConstBuiltin cterm=italic ctermfg=175 ctermbg=NONE gui=italic guifg=#d787af guibg=NONE
-" constants that are defined by macros: `NULL` in C.
 highlight TSConstMacro cterm=bold ctermfg=175 ctermbg=NONE gui=bold guifg=#d787af guibg=NONE
-" escape characters within a string
-" For identifiers referring to symbols or atoms.
-highlight TSSymbol cterm=italic ctermfg=139 ctermbg=NONE gui=italic guifg=#af87af guibg=NONE
-
-" TODO: More variety in these groups
+highlight TSSymbol cterm=bold ctermfg=139 ctermbg=NONE gui=bold guifg=#af87af guibg=NONE
 
 highlight TSField cterm=NONE ctermfg=252 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
 highlight TSParameter cterm=NONE ctermfg=252 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
 highlight TSVariable cterm=NONE ctermfg=252 ctermbg=NONE gui=NONE guifg=#d0d0d0 guibg=NONE
-highlight TSVariableBuiltin cterm=italic ctermfg=110 ctermbg=NONE gui=italic guifg=#87afd7 guibg=NONE
+highlight TSVariableBuiltin cterm=NONE ctermfg=110 ctermbg=NONE gui=NONE guifg=#87afd7 guibg=NONE
 
 highlight TSKeywordFunction cterm=NONE ctermfg=151 ctermbg=NONE gui=NONE guifg=#afd7af guibg=NONE
-
-highlight TSTypeBuiltin cterm=italic ctermfg=110 ctermbg=NONE gui=italic guifg=#87afd7 guibg=NONE
 
 highlight TSPunctBracket cterm=NONE ctermfg=138 ctermbg=NONE gui=NONE guifg=#af8787 guibg=NONE
 

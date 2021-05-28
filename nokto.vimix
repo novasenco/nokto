@@ -126,12 +126,12 @@ SignColumn   orange
 
 MatchParen B bg cyan
 
-"--- TREESITTER ----------------------------------------------------------------
+!--- TREESITTER ----------------------------------------------------------------
 
 TSConstant           ->  Constant
-" constant that are built in the language: `nil` in Lua.
-TSConstBuiltin       I pink
-" constants that are defined by macros: `NULL` in C.
+! constant that are built in the language: `nil` in Lua.
+TSConstBuiltin       -> Constant
+! constants that are defined by macros: `NULL` in C.
 TSConstMacro         B pink
 TSNumber             -> Number
 TSFloat              -> Float
@@ -139,12 +139,12 @@ TSBoolean            -> Boolean
 TSCharacter          -> Character
 TSString             -> String
 TSStringRegex        -> String
-" escape characters within a string
+! escape characters within a string
 TSStringEscape       -> String
-" For identifiers referring to symbols or atoms.
-TSSymbol             I magenta
+! For identifiers referring to symbols or atoms.
+TSSymbol             B magenta
 
-" TODO: More variety in these groups
+! TODO: More variety in these groups
 
 TSField              fg
 TSProperty           -> TSField
@@ -153,7 +153,7 @@ TSParameterReference -> TSParameter
 ! Any variable name that does not have another highlight
 TSVariable           fg
 ! Variable names that are defined by the languages like `this` or `self`.
-TSVariableBuiltin    I blue
+TSVariableBuiltin    blue
 
 TSFunction           -> Function
 TSFuncBuiltin        -> TSFunction
@@ -180,7 +180,7 @@ TSAnnotation         -> TSNamespace
 TSInclude            -> TSNamespace
 
 TSType               -> Type
-TSTypeBuiltin        I blue
+TSTypeBuiltin        -> Type
 
 ! delimiters ie: `.`
 TSPunctDelimiter     -> Delimiter
