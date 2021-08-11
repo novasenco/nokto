@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 27 May 2021
+" Last Change: 10 August 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -15,7 +15,9 @@ if &background isnot 'dark'
 endif
 
 if has('gui_running') || has('termguicolors') && &termguicolors
-  let g:terminal_ansi_colors = ['#303030', '#d7005f', '#afd7af', '#af8787', '#87afd7', '#af87af', '#87afaf', '#d0d0d0', '#808080', '#d787af', '#87af5f', '#d7af87', '#5f8787', '#af87d7', '#5faf87', '#e4e4e4']
+    let g:terminal_ansi_colors = ['#303030', '#d7005f', '#afd7af', '#af8787', '#87afd7', '#af87af', '#87afaf', '#d0d0d0', '#808080', '#d787af', '#87af5f', '#d7af87', '#5f8787', '#af87d7', '#5faf87', '#e4e4e4']
+elseif has('nvim') && !get(g:, 'nokto_no_nvim_term')
+  let [g:terminal_color_0,g:terminal_color_1,g:terminal_color_2,g:terminal_color_3,g:terminal_color_4,g:terminal_color_5,g:terminal_color_6,g:terminal_color_7,g:terminal_color_8,g:terminal_color_9,g:terminal_color_10,g:terminal_color_11,g:terminal_color_12,g:terminal_color_13,g:terminal_color_14,g:terminal_color_15] = ['#303030','#d7005f','#afd7af','#af8787','#87afd7','#af87af','#87afaf','#d0d0d0','#808080','#d787af','#87af5f','#d7af87','#5f8787','#af87d7','#5faf87','#e4e4e4']
 endif
 
 highlight! link Function Identifier
@@ -95,8 +97,8 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight Italic cterm=italic ctermfg=NONE ctermbg=NONE gui=italic guifg=NONE guibg=NONE
   highlight Underlined cterm=underline ctermfg=NONE ctermbg=NONE gui=underline guifg=NONE guibg=NONE
   highlight Tag cterm=underline ctermfg=5 ctermbg=NONE gui=underline guifg=#af87af guibg=NONE
-  highlight Error cterm=bold ctermfg=0 ctermbg=9 gui=bold guifg=#000000 guibg=#d787af
-  highlight Todo cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
+  highlight Error cterm=bold,reverse ctermfg=9 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
+  highlight Todo cterm=bold,reverse ctermfg=6 ctermbg=NONE gui=bold,reverse guifg=#87afaf guibg=NONE
   highlight NormalFloat cterm=NONE ctermfg=NONE ctermbg=0 gui=NONE guifg=NONE guibg=#1c1c1c
   highlight StatusLine cterm=NONE ctermfg=7 ctermbg=0 gui=NONE guifg=#d0d0d0 guibg=#444444
   highlight StatusLineNC cterm=NONE ctermfg=3 ctermbg=0 gui=NONE guifg=#af8787 guibg=#303030
@@ -120,10 +122,10 @@ if (exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2) < 256
   highlight lCursor cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=#000000 guibg=#d0d0d0
   highlight CursorIM cterm=NONE ctermfg=0 ctermbg=7 gui=NONE guifg=#000000 guibg=#d0d0d0
   highlight Directory cterm=NONE ctermfg=4 ctermbg=NONE gui=NONE guifg=#87afd7 guibg=NONE
-  highlight ErrorMsg cterm=bold ctermfg=0 ctermbg=9 gui=bold guifg=#000000 guibg=#d787af
-  highlight WarningMsg cterm=bold ctermfg=0 ctermbg=11 gui=bold guifg=#000000 guibg=#d7af87
+  highlight ErrorMsg cterm=bold,reverse ctermfg=9 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
+  highlight WarningMsg cterm=bold,reverse ctermfg=11 ctermbg=NONE gui=bold,reverse guifg=#d7af87 guibg=NONE
   highlight ModeMsg cterm=bold ctermfg=11 ctermbg=NONE gui=bold guifg=#d7af87 guibg=NONE
-  highlight SpellBad cterm=bold ctermfg=0 ctermbg=9 gui=bold guifg=#000000 guibg=#d787af
+  highlight SpellBad cterm=bold,reverse ctermfg=9 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
   highlight DiffAdd cterm=bold ctermfg=0 ctermbg=6 gui=bold guifg=#000000 guibg=#87afaf
   highlight DiffDelete cterm=NONE ctermfg=9 ctermbg=9 gui=NONE guifg=#d787af guibg=#d787af
   highlight DiffChange cterm=NONE ctermfg=0 ctermbg=4 gui=NONE guifg=#000000 guibg=#87afd7
@@ -180,8 +182,8 @@ highlight Italic cterm=italic ctermfg=NONE ctermbg=NONE gui=italic guifg=NONE gu
 highlight Underlined cterm=underline ctermfg=NONE ctermbg=NONE gui=underline guifg=NONE guibg=NONE
 highlight Tag cterm=underline ctermfg=139 ctermbg=NONE gui=underline guifg=#af87af guibg=NONE
 
-highlight Error cterm=bold ctermfg=16 ctermbg=175 gui=bold guifg=#000000 guibg=#d787af
-highlight Todo cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 guibg=#87afaf
+highlight Error cterm=bold,reverse ctermfg=175 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
+highlight Todo cterm=bold,reverse ctermfg=109 ctermbg=NONE gui=bold,reverse guifg=#87afaf guibg=NONE
 
 " |highlight-groups|
 
@@ -219,12 +221,12 @@ highlight CursorIM cterm=NONE ctermfg=16 ctermbg=252 gui=NONE guifg=#000000 guib
 
 highlight Directory cterm=NONE ctermfg=110 ctermbg=NONE gui=NONE guifg=#87afd7 guibg=NONE
 
-highlight ErrorMsg cterm=bold ctermfg=16 ctermbg=175 gui=bold guifg=#000000 guibg=#d787af
-highlight WarningMsg cterm=bold ctermfg=16 ctermbg=180 gui=bold guifg=#000000 guibg=#d7af87
+highlight ErrorMsg cterm=bold,reverse ctermfg=175 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
+highlight WarningMsg cterm=bold,reverse ctermfg=180 ctermbg=NONE gui=bold,reverse guifg=#d7af87 guibg=NONE
 
 highlight ModeMsg cterm=bold ctermfg=180 ctermbg=NONE gui=bold guifg=#d7af87 guibg=NONE
 
-highlight SpellBad cterm=bold ctermfg=16 ctermbg=175 gui=bold guifg=#000000 guibg=#d787af
+highlight SpellBad cterm=bold,reverse ctermfg=175 ctermbg=NONE gui=bold,reverse guifg=#d787af guibg=NONE
 
 highlight DiffAdd cterm=bold ctermfg=16 ctermbg=109 gui=bold guifg=#000000 guibg=#87afaf
 highlight DiffDelete cterm=NONE ctermfg=175 ctermbg=175 gui=NONE guifg=#d787af guibg=#d787af

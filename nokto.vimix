@@ -1,7 +1,7 @@
 " Name: nokto
 " Description: black, spacey colorscheme
 " Author: Nova Senco <novasenco at protonmail dot ch>
-" Last Change: 27 May 2021
+" Last Change: 10 August 2021
 " URL: https://github.com/novasenco/nokto
 " Type: dark
 
@@ -49,8 +49,8 @@ Underlined U
 Tag        U magenta
 HtmlBold -> Bold ; HtmlItalic -> Italic ; HtmlUnderline -> Underlined
 
-Error B bg pink
-Todo  B bg cyan
+Error BR pink
+Todo  BR cyan
 
 " |highlight-groups|
 
@@ -91,13 +91,13 @@ CursorIM bg white
 
 Directory blue
 
-ErrorMsg   B bg pink
-WarningMsg B bg yellow
+ErrorMsg   BR pink
+WarningMsg BR yellow
 
 ModeMsg B yellow
 MoreMsg  -> Question -> ModeMsg
 
-SpellBad B bg pink
+SpellBad BR pink
 SpellCap -> SpellLocal -> SpellRare -> SpellBad
 
 DiffAdd    B bg   cyan
